@@ -11,25 +11,16 @@
 <body>
     <!-- -------------------nav--------------------- -->
  <div class="nav">
-        <div class="logo-area">
-            <img src="./my logo.png" class="logo">
+        <div class="logo">
+            <img src="./my logo.png" class="logo-img">
         </div>
-        <!-- Hamburger Button -->
-            <div class="hamburger" id="hamburger">
-              <i class="fa-solid fa-bars"></i>
-            </div>
-            <div class="navbtn" id="navbtn">
-                  <!-- Close Button -->
-                <div class="close-btn" id="closeBtn">
-                        <i class="fa-solid fa-xmark"></i>
-                </div>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#services">Service</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+            <div class="navbtn" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#about">About Me</a>
+                <a href="#services">Service</a>
+                <a href="#contact">Contact</a>
             </div>   
+      <div class="hamburger" id="hamburger" onclick="toggleMenu()">☰</div>
  </div>
     <!-- ---------------Home------------------ -->
    <div id="home">
@@ -40,7 +31,7 @@
                     <h1 class="name">MD YOUSUF</h1>
                     <p>Web developer & designer building<br> clean, fast, and user-focused websites. <br> I blend code and creativity to bring ideas to life.  <br><br><br></p>
                 </div>
-                    <a href="./cv.pdf" download class="btn">Download Resume</a>
+                    <a href="images/my-cv.pdf" download class="btn">Download Resume</a>
             </div>
       </div>
    </div>
@@ -160,7 +151,7 @@
                      <ul>
                     <li><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/md-yousuf-116574375" target="_blank"></a></li>  
                     <li><i class="fa-brands fa-github"></i> <a href="https://github.com/md-yousuf05" target="_blank"></a></li>
-                    <li><i class="fa-solid fa-phone"></i></li> 
+<!--                     <li><i class="fa-solid fa-phone"></i></li>  -->
                      <li><i class="fa-solid fa-envelope"></i> <a href="mailto:mdyousuf05003@gmail.com"></a></li>
                     </ul>
                  </div>   
@@ -188,8 +179,6 @@
 </script>
 </body>
 </html>
-
-
 
 
 
