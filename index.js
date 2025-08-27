@@ -31,18 +31,27 @@ for (let i of c) {
      }   
      });
     }
+// -------------responsive nav bar-----------------
+const nav = document.getElementById("navLinks");
+const burger = document.getElementById("hamburger");
+let open = false;
 
-// Hamburger toggle
-// Hamburger toggle
-const hamburger = document.getElementById("hamburger");
-const navbtn = document.getElementById("navbtn");
-const closeBtn = document.getElementById("closeBtn");
+function toggleMenu() {
+  open = !open;
+  if (open) {
+    nav.classList.add("show");
+    burger.innerHTML = "✖";
+  } else {
+    nav.classList.remove("show");
+    burger.innerHTML = "☰";
+  }
+}
 
-hamburger.addEventListener("click", () => {
-    navbtn.classList.add("active");
-});
-
-// Close button
-closeBtn.addEventListener("click", () => {
-    navbtn.classList.remove("active");
+// Reset menu on resize
+window.addEventListener("resize", () => {
+  if (window.innerWidth >= 1000) {
+    nav.classList.remove("show");
+    burger.innerHTML = "☰";
+    open = false;
+  }
 });
