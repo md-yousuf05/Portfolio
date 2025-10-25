@@ -3,7 +3,6 @@
     padding: 0px;
     font-family: 'poppins', sans-serif;
     scroll-behavior: smooth;
-
 }
 body{
     background-color: black;
@@ -43,11 +42,12 @@ body{
   text-decoration: none;
   color: white;
   font-size: 18px;
-  transition: color 0.3s;
+  transition: all 0.2s linear;
 }
 
 .navbtn a:hover {
   color: crimson;
+  transform: scale(1.2);
 }
 /* .navbtn a::after{
     content: '';
@@ -110,7 +110,7 @@ body{
 .name{
     font-size:larger;
     font-weight: bold;
-    background: linear-gradient(to right, crimson,#3f0916,#262626,#ababab);
+    background-color: crimson;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -120,6 +120,7 @@ body{
 .btn{
     display: inline-flex;
     width: fit-content;
+    height: fit-content;
     border: 3px solid crimson;
     border-radius: 6px;
     padding: 14px 30px;
@@ -142,6 +143,7 @@ body{
 #about{
       padding: 80px 20px;
     color:#ababab ;
+    background-color: #262626;
 }
 .row{
     display: flex;
@@ -249,6 +251,7 @@ transition:0.5s;
 /* ---------------contact----------------- */
 #contact{
     padding-top: 20px;
+    
 }
 .contact-area{
     justify-content: space-between;
@@ -259,7 +262,6 @@ transition:0.5s;
     font-weight: 600;
     color: #ababab;
     text-align: center;
-    
 }
 .cont-title-para {
     font-size: x-large;
@@ -358,8 +360,16 @@ form input, textarea{
         font-size: large;
     }
 /* -----------------------about me ------------------------- */
-    .about-col-1, .about-col-2{
+   .about-col-1{
+    width: 35%;
+    }
+    .about-col-1 img{
         width: 100%;
+        align-content: center;
+        border-radius: 15px;
+    }
+    .about-col-2{
+        width: 60%;
     }
     .about-col-2 h2 {
         font-size: 36px;
@@ -631,19 +641,19 @@ form input, textarea{
     margin-bottom: 10%;
     }
     form input,textarea{
-        font-size: smaller;
-        text-align: center;
-        padding: 5% ;
-        background: #262626;
-        margin: 2% 6%;
-        border-radius: 15px; 
-        resize:none;
-        overflow: hidden;
+    font-size: smaller;
+    text-align: center;
+    padding: 5% ;
+    background: #262626;
+    margin: 2% 6%;
+    border-radius: 15px; 
+    resize:none;
+    overflow: hidden;
     }
     .but{
     width: fit-content;
     font-size: smaller;
-  font-weight:bold;
+    font-weight:bold;
     padding: 5px 25px;
     background-color: black;
     color: white;
@@ -658,9 +668,22 @@ form input, textarea{
     color: black;
     transform: translate(5px,5px);
     }
-     #msg{
-        color: rgb(44, 243, 44);
-        display: block;
+    #msg{
+    color: rgb(44, 243, 44);
+    display: block;
+    }
+}
+/* ---------------- Media Query: Small Screens (450px–600px) ---------------- */
+@media screen and (min-width:450px) and (max-width:600px) {
+    .about-col-1{
+    /* width: 35%; */
+    }   
+    .about-col-1 img{
+        width:  100%;
+        border-radius: 15px;
+    }
+    .about-col-2{
+        width: 100%;
     }
 }
 /* ---------------- Media Query: Small Screens (200px–450px) ---------------- */
