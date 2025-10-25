@@ -92,7 +92,7 @@ body{
 }
 /* ------------------home--------------------- */
 #header{
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background-image: url(./images/background.png);
     background-repeat: no-repeat;
@@ -130,6 +130,7 @@ body{
     color: #fff;
     transition: 0.5s;
     box-shadow: 5px 5px #242424;
+    margin: 25px 0px;
 }
 .btn:hover{
     background: CRIMSON;
@@ -350,6 +351,7 @@ form input, textarea{
     #header{
     background-size: cover;
     padding: 60px 15px;
+    height: 100%;
     }
     .info{
         font-size: 25px;
@@ -358,6 +360,7 @@ form input, textarea{
      .btn{
         padding: 12px 22px;
         font-size: large;
+        margin: 30px 0px;
     }
 /* -----------------------about me ------------------------- */
    .about-col-1{
@@ -506,12 +509,12 @@ form input, textarea{
 @media only screen and (max-width: 600px){
   /* ------------home-------------- */  
   .logo-img{
-      width: 170px;
-    height: 40px;
+      width: 145px;
   } 
   #header{
         background-size: cover;
         padding: 40px 10px;
+        height: 100%;
     }    
     .info{
         font-size: 18px;
@@ -523,6 +526,7 @@ form input, textarea{
     .btn{
         padding: 10px 20px;
         font-size: medium;
+        margin: 30px 0px;
     }    
     /* -----------------------about me ------------------------- */
     .about-col-1, .about-col-2{
@@ -673,7 +677,7 @@ form input, textarea{
     display: block;
     }
 }
-/* ---------------- Media Query: Small Screens (450px–600px) ---------------- */
+/* ---------------- Media Query for about section img: Small Screens (450px–600px) ---------------- */
 @media screen and (min-width:450px) and (max-width:600px) {
     .about-col-1{
     /* width: 35%; */
@@ -688,10 +692,15 @@ form input, textarea{
 }
 /* ---------------- Media Query: Small Screens (200px–450px) ---------------- */
 @media screen and (min-width:200px) and (max-width:450px) {
+    .logo-img {
+    width: 135px;
+    height: auto; 
+    }
     /* HOME */
     #header {
         background-size: cover;
-        padding: 40px 10px;
+        padding: 20px 10px;
+        height: 100%;
     }
     .info {
         font-size: 18px;
@@ -700,10 +709,10 @@ form input, textarea{
         font-size: 16px;
     }
     .btn {
-        padding: 10px 20px;
-        font-size: 16px;
+        padding: 8px 16px;
+        font-size: 12px;
+        margin: 30px 0px;
     }
-
     /* ABOUT */
     .row {
         flex-direction: column;
