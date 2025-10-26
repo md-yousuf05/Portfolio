@@ -179,27 +179,33 @@
   })
 
    // Show button when user scrolls down
-const goTopBtn = document.getElementById("goTop");
+document.addEventListener("DOMContentLoaded", () => {
+  const goTopBtn = document.getElementById("goTopBtn");
+  if (!goTopBtn) return; // safety
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
-    goTopBtn.style.display = "block";
-  } else {
-    goTopBtn.style.display = "none";
-  }
-});
-
-goTopBtn.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
+  // Show/hide button on scroll
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+      goTopBtn.style.display = "block";
+    } else {
+      goTopBtn.style.display = "none";
+    }
   });
+
+  // Smooth scroll to top on click
+  goTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  // Optional: show button immediately if page loaded scrolled down
+  if (window.scrollY > 100) goTopBtn.style.display = "block";
 });
 
       
 </script>
 </body>
 </html>
+
 
 
 
