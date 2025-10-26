@@ -56,17 +56,4 @@ window.addEventListener("resize", () => {
   }
 });
 
-// Show button when user scrolls down
-window.onscroll = function() {
-  const btn = document.getElementById("goTopBtn");
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-    btn.style.display = "block";
-  } else {
-    btn.style.display = "none";
-  }
-};
 
-// Scroll smoothly to top
-document.getElementById("goTopBtn").addEventListener("click", function() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
